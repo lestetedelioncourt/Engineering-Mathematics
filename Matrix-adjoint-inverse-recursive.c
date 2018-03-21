@@ -51,6 +51,26 @@ void creatematrix(int choice)
 		inversematrix(matrix1, choice);
 }
 
+void permuteA(int *A, int *B, int l, int r, int **matrix)
+{
+	int i;
+	if (l == r)
+		l = r;
+	else
+	{
+		for (i = l; i <= r; i++)
+		{
+			swap((A + l), (A + i));
+			if (l == 0)
+			{
+				B[0] = 0; B[1] = 1; B[2] = 2;
+			}
+			permuteB(A, B, 0, 2, matrix);
+			permuteA(A, B, (l + 1), 2, matrix);
+			swap((A + l), (A + i));
+		}
+	}
+}
 
 void permuteB(int *A, int *B, int l, int r, int **matrix)
 {
@@ -75,27 +95,6 @@ void permuteB(int *A, int *B, int l, int r, int **matrix)
 			swap((B + l), (B + i));
 			permuteB(A, B, (l + 1), 2, matrix);
 			swap((B + 1), (B + i));
-		}
-	}
-}
-
-void permuteA(int *A, int *B, int l, int r, int **matrix)
-{
-	int i;
-	if (l == r)
-		l = r;
-	else
-	{
-		for (i = l; i <= r; i++)
-		{
-			swap((A + l), (A + i));
-			if (l == 0)
-			{
-				B[0] = 0; B[1] = 1; B[2] = 2;
-			}
-			permuteB(A, B, 0, 2, matrix);
-			permuteA(A, B, (l + 1), 2, matrix);
-			swap((A + l), (A + i));
 		}
 	}
 }
