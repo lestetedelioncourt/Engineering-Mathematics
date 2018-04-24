@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void createBoard(char [5][5]); //this initialises the structure for the game board
+void createBoard(char [5][5]); //this initializes the structure for the game board
 void printBoard(const char[5][5]); //prints the game board
 void humanMove(char[5][5], int[8], int[9], int&); //allows human player to make a move
 void humanPaths(int[8], char[5][5], int, int); //examines the board and adds to the array storing information on the winning paths possible for a human player
