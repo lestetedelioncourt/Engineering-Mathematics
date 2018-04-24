@@ -33,7 +33,7 @@ ComplexNumber ComplexNumber::operator-(const ComplexNumber &rhs) const {
 	return temp;
 }
 
-ComplexNumber ComplexNumber::operator*(const ComplexNumber &rhs) const {
+ComplexNumber ComplexNumber::operator*(const ComplexNumber &rhs) const  {
 	ComplexNumber temp;
 	temp.realpart = (realpart*rhs.realpart) - (imagpart*rhs.imagpart);
 	temp.imagpart = (realpart*rhs.imagpart) + (rhs.realpart*imagpart);
