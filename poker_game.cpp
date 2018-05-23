@@ -343,13 +343,14 @@ void constructScores(const vector<vector<Card>> &hands, const vector<Card> &face
 				}
 			}
 		}
-
+		
+		//code below determines the best hand for this particular player given all the card combinations of hand+face up cards
 		for (int k = 0; k < 21; ++k) {
 			if (points[k][0] > most[0]) {
 				most[0] = points[k][0];
 			}
 		}
-
+		
 		mostarray.push_back(most[0]);
 
 		for (int k = 0; k < 21; ++k) {
@@ -435,7 +436,8 @@ void constructScores(const vector<vector<Card>> &hands, const vector<Card> &face
 			highest[0] = mostarray[i];
 		}
 	}
-
+	
+	//code below determines winning hand out of all players (not yet in all cases)
 	int h = 0;
 	for (int i = 0; i < noplayers; ++i) {
 		if ((((highest[0] >= 0) && (highest[0] < 4)) && ((mostarray[i] >= 0) && (mostarray[i] < 4))) //High Card
