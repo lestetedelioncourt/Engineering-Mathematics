@@ -6,7 +6,6 @@
 #include <string>
 #include <functional>
 #include <iterator>
-#include <stdexcept>
 
 using namespace std;
 
