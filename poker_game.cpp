@@ -6,6 +6,7 @@
 #include <string>
 #include <functional>
 #include <iterator>
+#include <stdexcept>
 
 using namespace std;
 
@@ -40,6 +41,7 @@ int main() {
 	shuffle(Deck);
 	printDeck(Deck);
 
+	cin.exceptions(ios_base::failbit);
 	noofplayers = createPlayers();
 
 	do {
