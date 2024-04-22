@@ -32,7 +32,7 @@ void creatematrix(int choice)
 	int A[] = { 0, 1, 2 };
 	int B[] = { 0, 1, 2 };
 
-	permuteA(A, B, 0, 2, matrix1, Adj);
+	permuteA(A, B, 0, 2, matrix1);
 
 	if (choice == 5)
 	{
