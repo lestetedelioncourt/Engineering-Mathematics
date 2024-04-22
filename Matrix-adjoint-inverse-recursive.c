@@ -1,3 +1,7 @@
+They've obviously changed this. Passing 6 parameters into the permuteA function it won't even compile or run, let alone work. Why would I post it if it didn't even run?
+
+This particular bit of code worked perfectly in the recursive permutation and was actually the code I was proudest of prior to starting work as a software engineer.
+
 #include <stdio.h>
 
 void permuteB(int *A, int *B, int l, int r, int **matrix);
@@ -32,7 +36,7 @@ void creatematrix(int choice)
 	int A[] = { 0, 1, 2 };
 	int B[] = { 0, 1, 2 };
 
-	permuteA(A, B, 0, 2, matrix1);
+	permuteA(A, B, 0, 2, matrix1, Adj);
 
 	if (choice == 5)
 	{
