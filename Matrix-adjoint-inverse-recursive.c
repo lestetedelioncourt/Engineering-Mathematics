@@ -54,9 +54,7 @@ void creatematrix(int choice)
 void permuteA(int *A, int *B, int l, int r, int **matrix)
 {
 	int i;
-	if (l == r)
-		l = r;
-	else
+	if (l != r)
 	{
 		for (i = l; i <= r; i++)
 		{
